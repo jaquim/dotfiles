@@ -1,0 +1,28 @@
+[user]
+	name = Jelte Fennema
+	email = github-tech@jeltef.nl
+	signingkey = Jelte Fennema (JelteF) <github-tech@jeltef.nl>
+[auto]
+	color = true
+[ui]
+	color = auto
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = ~/dotfiles/git/gitignore_global
+	editor = vim
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+	default = current
+	followTags = true
+[help]
+    autocorrect = 1
+
+[alias]
+    track = "!f(){ branch=$(git name-rev --name-only HEAD); cmd=\"git branch $branch --set-upstream-to=${1:-origin}/${2:-$branch}\"; echo $cmd; $cmd; }; f"
+    wdiff = diff --color-words
+    get = "!git stash && git pull --rebase && git stash pop"

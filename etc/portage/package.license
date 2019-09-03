@@ -1,0 +1,23 @@
+# Skype license
+>=net-im/skype-4.1.0.20 skype-4.0.0.7-copyright
+
+# Google Chrome license
+>=www-client/google-chrome-27.0.1453.93_p200836 google-chrome
+
+# Google Hangout license
+>=www-plugins/google-talkplugin-4.4.2.0 Google-TOS
+
+# Adobe Flash license
+>=www-plugins/adobe-flash-11.2.202.285 AdobeFlash-11.x
+
+# Teamviewer license
+>=net-misc/teamviewer-8.0.20931 TeamViewer
+
+# Oracle JDK
+dev-java/oracle-jdk-bin Oracle-BCLA-JavaSE
+
+# Virtualbox
+app-emulation/virtualbox-bin PUEL
+
+# VLC codec
+media-libs/fdk-aac FraunhoferFDK

@@ -1,0 +1,176 @@
+# Extra LaTeX features
+app-text/texlive extra graphics humanities science luatex xindy
+app-text/texlive-core xetex
+>=media-libs/gd-2.0.35-r3 truetype jpeg png fontconfig
+
+*/* -ruby_targets_ruby23
+
+# GTK+ skin for QT apps
+dev-qt/qtgui:4 gtkstyle
+app-emulation/emul-linux-x86-qtlibs gtkstyle
+
+# QT
+dev-libs/libpcre pcre16
+
+# Disable watermark on ati drivers
+x11-drivers/ati-drivers disable-watermark
+
+net-misc/networkmanager dhcpcd -dhclient
+app-crypt/pinentry gnome-keyring
+
+# Enable flash
+games-util/steam-client-meta flash trayicon -steamruntime streaming
+games-util/steam-meta -steamruntime
+games-util/steam-games-meta -steamruntime mono steamgames_shatter steamgames_source_engine steamgames_tf2 steamgames_trine2
+games-util/steam-launcher -steamruntime
+
+# Wine dependency
+app-emulation/wine pulseaudio oss -vaapi
+>=dev-libs/elfutils-0.156 static-libs
+
+# Needed by SQLAlchemy and Synapse
+>=dev-lang/python-2.7 sqlite
+
+# No bash support for powerline since I'm using fish
+app-misc/powerline -bash
+
+# Flash 32-bit to use in steam
+>=www-plugins/adobe-flash-11.2.202.285 32bit
+
+# Latex dependency
+>=media-libs/gd-2.0.35-r3 fontconfig
+
+# Fix mesa ebuild
+media-libs/mesa -llvm llvm-shared-libs
+
+# Steam requirements
+media-libs/mesa gles2
+media-libs/libsdl2 gles
+x11-drivers/nvidia-drivers multilib
+*/* abi_x86_32
+
+
+# VLC webserver
+media-video/vlc httpd lua
+media-video/vlc postproc
+# VLC youtube
+media-video/vlc gnutls
+
+# VLC dependency
+>=sys-libs/zlib-1.2.8-r1 minizip
+media-video/vlc postproc
+
+# Scipy dependency in numpy
+dev-python/numpy lapack
+
+# Portage with python3, might be faster
+sys-apps/portage python3
+
+# Layman with svn
+app-portage/layman subversion
+
+# Layman portage integration
+app-portage/layman sync-plugin-portage
+
+# Thread usage
+media-video/ffmpeg:0.10 -threads
+virtual/ffmpeg -threads
+
+# ipython matplotlib and notebook
+dev-python/ipython matplotlib notebook
+x11-base/xorg-server xvfb
+
+# Shutter dependency
+>=media-gfx/imagemagick-6.8.6.8 perl
+
+# Bind dependencies
+net-dns/bind caps dlz
+
+# Fortune offensive enabled
+games-misc/fortune-mod offensive
+games-misc/fortune-mod-all offensive
+games-misc/fortune-mod-kernelcookies offensive
+games-misc/fortune-mod-gentoo-forums offensive
+games-misc/fortune-mod-gentoo-dev offensive
+games-misc/fortune-mod-slackware offensive
+
+# Gitlab with MySQL
+www-apps/gitlabhq -postgres mysql -ruby_targets_ruby20
+dev-vcs/gitlab-shell -ruby_targets_ruby20
+
+# Whatpulse with network monitoring
+app-misc/whatpulse pcap
+
+# Multilib
+media-plugins/alsa-plugins pulseaudio
+
+# Libreoffice
+media-libs/harfbuzz icu
+
+# Imagemagick support for just about everything
+media-gfx/imagemagick jpeg jpeg2k png pdf tiff
+
+# Rust dep
+dev-lang/rust -system-llvm
+sys-devel/llvm multitarget
+
+# Nvidia interface
+x11-drivers/nvidia-drivers gtk2
+
+# Neovim
+virtual/lua luajit
+
+# Postgres needs uuid support for assignment
+dev-db/postgresql uuid
+
+# Needed for the riak database
+dev-lang/erlang smp
+
+# Needed for virt-manager
+net-misc/spice-gtk -gstreamer gtk3 usbredir
+app-emulation/qemu spice usbredir
+
+# Needed for seaborn
+sci-libs/hdf5 -threads
+dev-libs/c-blosc hdf5
+
+
+# PHP
+dev-lang/php fpm gd pdo mysql mysqli postgres
+app-eselect/eselect-php fpm
+
+
+www-servers/uwsgi debug
+
+# W3M with image support
+www-client/w3m imlib
+
+# Octave
+x11-libs/fltk xft
+
+# Android mounting
+gnome-base/gvfs mtp
+
+#
+dev-lang/ghc binary
+
+# Eog dependencies
+dev-libs/libpeas -python_targets_python3_4
+
+# Needed by valgrind
+sys-libs/glibc debug
+
+#
+media-libs/gexiv2 introspection
+
+# Bug https://bugs.gentoo.org/show_bug.cgi?id=567944
+net-libs/rb_libtorrent -python_targets_python3_4 -python_targets_python3_5
+
+# Only one python 3 for vim
+app-editors/vim -python_targets_python3_4
+
+# Add ncat
+net-analyzer/nmap ncat ndiff
+
+# Skype
+dev-qt/qtwebkit -exceptions

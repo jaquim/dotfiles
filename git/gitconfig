@@ -1,7 +1,7 @@
 [user]
-	name = Jelte Fennema
-	email = github-tech@jeltef.nl
-	signingkey = Jelte Fennema (JelteF) <github-tech@jeltef.nl>
+	name = Jaquim Cadogan
+	email = jqmcdn@cdn.jqm.com
+	signingkey = jqmcdn
 [auto]
 	color = true
 [ui]
